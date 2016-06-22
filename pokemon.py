@@ -72,8 +72,8 @@ class GrassPokemon(Pokemon):
 		
 		
 pokemonList= []
-pokemonList.append(FirePokemon("Charizard",200))
-pokemonList.append(WaterPokemon("Lapras",200))
+pokemonList.append(FirePokemon("Charizard",150))
+pokemonList.append(WaterPokemon("Lapras",150))
 pokemonList.append(GrassPokemon("Tropius",200))
 pokemonList.append(FirePokemon("Ninetails",200))	
 pokemonList.append(WaterPokemon("Empoleon",200))
@@ -96,7 +96,7 @@ print "Trainer2 has ",pokeno2," pokemon and has sent out " ,pokemonList[y].getNa
 
 while(pokeno1>0 and pokeno2>0):
 
-	while (pokemonList[y].getHp()>0 and pokemonList[0].getHp()>0 ):
+	while (pokemonList[y].getHp()>0 and pokemonList[x].getHp()>0 ):
 	
 		
 		
@@ -234,24 +234,24 @@ while(pokeno1>0 and pokeno2>0):
 			pokemonList[x].changeHp(0)
 		print "HP of " ,pokemonList[x].getName()," has fallen to:", pokemonList[x].getHp()
 		if(pokemonList[x].getHp()<=0):
-			print "\n Trainer1's pokemon ", pokemonList[x].getName(), " has fainted!"
+			print "Trainer1's pokemon ", pokemonList[x].getName(), " has fainted!"
 			pokeno1=pokeno1-1
 			print "Trainer1 has ", pokeno1, " pokemon left."
 			if(pokeno1==0):
 				print "\nAll of Trainer1's pokemon have fainted! Trainer2 wins the battle!!\n"
 				break
 			else:
-			
 				if(pokeno1==1):
 					x=3-x-a
+				
 				else:
 					x=random.randint(0,2)
 					while(x==a):
 						x=random.randint(0,2)
-				print "Trainer1 has sent out " , pokemonList[x].getName(),"with HP: ",pokemonList[x].getHp(), "\n"
-				
+				print "Trainer1 has sent out " , pokemonList[x].getName(),"with HP: ",pokemonList[x].getHp(),"\n"
+				break
 		
-		
+	
 		
 
 	
